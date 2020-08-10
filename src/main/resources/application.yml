@@ -1,0 +1,40 @@
+# application.yml 설정 파일 (주의: tab과 space 혼용 금지)
+
+# Development
+spring:
+  active.profiles: dev
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+
+server.port: 9080
+
+logging:
+  level:
+    root: info
+    org.springframework: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5p - [%c{2}] %m%n'
+
+---
+
+# Production
+spring:
+  profiles: production
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: true
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+
+logging:
+  level:
+    root: info
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5p - [%c{2}] %m%n'
