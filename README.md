@@ -138,8 +138,9 @@ module.exports = {
 
 
 Backend의 Gradle 빌드시 npm 통합을 위해 'com.moowork.node' 플러그인을 추가하고 
-필요한 타스크를 작성하자. 
-참고: (./build.gradle)[build.gradle]
+필요한 타스크를 작성하자.
+ 
+참고: build.gradle
 
 
 
