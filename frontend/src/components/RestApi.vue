@@ -17,7 +17,10 @@ export default {
           name: 'Hello'
         }
       })
-      .catch(err => {
+      .then(function (res) {
+        console.log(res.data);
+      })
+      .catch(function (err) {
         console.log(err);
       })
     }
